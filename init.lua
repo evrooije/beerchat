@@ -91,6 +91,7 @@ if mod_storage:get_string("channels") == "" then
 end
 
 channels = minetest.parse_json(mod_storage:get_string("channels"))
+channels[main_channel_name] = { owner = main_channel_owner, color = main_channel_color }
 
 playersChannels = {}
 local currentPlayerChannel = {}
